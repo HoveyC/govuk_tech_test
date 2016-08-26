@@ -1,0 +1,24 @@
+#listA{
+    float:left; margin:20px;
+}
+.mark{
+    width:100px;
+    text-align: center;
+    font-weight:bold;
+    float:right;
+    background-color:#444;
+    color:white;
+    border-radius:3px;
+}
+.newtime{
+    background-color:#DDFFDD;
+}
+.oldtime{
+    background-color:#DDDDFF;
+}
+.header {
+    border-width: 2px; 
+    overflow-y: scroll;
+    width: 500px;
+    background-color: #ebebeb 
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link rel="stylesheet" href="http://cdn.webix.com/edge/webix.css" type="text/css"> 
+        <script src="http://cdn.webix.com/edge/webix.js" type="text/javascript"></script>  
+
+    </head>
+
+    <style type="text/css">
+        #listA{
+            float:left; margin:20px;
+        }
+        .mark{
+            width:100px;
+            text-align: center;
+            font-weight:bold;
+            float:right;
+            background-color:#444;
+            color:white;
+            border-radius:3px;
+        }
+        .newtime{
+            background-color:#DDFFDD;
+        }
+        .oldtime{
+            background-color:#DDDDFF;
+        }
+    </style>
+    <body>
+        <div id="listA"></div>
+        <script type="text/javascript" charset="utf-8">
+            webix.ui({
+                container: "listA",
+                view: "grouplist",
+                url: "rest->http://localhost:8080/candidates",
+                width: 320,
+                height: 600,
+                templateBack: "#value#",
+                templateGroup: "Candidate: <b>#value#</b>",
+                templateItem: " #dob# <br/>#experience#",
+                select: true,
+                scheme: {
+                    $group: {
+                        by: 'name'
+                    },
+                    $sort: {by: "value", dir: "desc"}
+                }
+            });
+        </script>
+    </body>
+</html>
