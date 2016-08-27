@@ -1,9 +1,8 @@
-uk/gov/homeoffice/test/dao/CandidateDAO.class
-uk/gov/homeoffice/test/pojo/JsonError$JsonErrorBuilder.class
-uk/gov/homeoffice/test/pojo/JsonError.class
-uk/gov/homeoffice/test/pojo/Candidate.class
-uk/gov/homeoffice/test/rs/ApplicantsRestService.class
 uk/gov/homeoffice/test/dao/CandidateServiceImpl.class
 uk/gov/homeoffice/test/pojo/Candidate$CandidateBuilder.class
+uk/gov/homeoffice/test/pojo/JsonError$JsonErrorBuilder.class
+uk/gov/homeoffice/test/pojo/JsonError.class
 uk/gov/homeoffice/test/dao/CandidateService.class
+uk/gov/homeoffice/test/pojo/Candidate.class
 uk/gov/homeoffice/test/pojo/JsonSerialisable.class
+uk/gov/homeoffice/test/rs/ApplicantsRestService.class

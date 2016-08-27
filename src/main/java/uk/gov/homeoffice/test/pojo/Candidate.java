@@ -26,14 +26,18 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Candidate extends JsonSerialisable {
 
-    /**
-     *
-     */
+    
     private int id;
     private String name;
     private String dob;
     private String experience;
 
+    /**
+     * This Constructor is for creating instances from a JsonArray object returned 
+     * back from the database
+     * 
+     * @param args 
+     */
     public Candidate(JsonArray args) {
         try {
           

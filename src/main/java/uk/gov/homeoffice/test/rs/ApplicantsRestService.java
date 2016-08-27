@@ -14,9 +14,12 @@ public class ApplicantsRestService extends AbstractVerticle {
 
     /**
      *
-     * This method is called by vertx on startup and assigns request handlers to
-     * /bets and /available. Any other requests will be sent back a 501 not
+     * This method is called by vertx on startup and assigns request handler to
+     * /candidates Any other requests will be sent back a 501 not
      * implemented error.
+     * 
+     * the database configuration is initialised and a database client is created 
+     * with the config ready for connections to be made 
      */
     @Override
     public void start() {
@@ -50,6 +53,17 @@ public class ApplicantsRestService extends AbstractVerticle {
         vertx.createHttpServer().requestHandler(router::accept).listen(8080);
     }
 
+    /**
+     * 
+     * This method calls the data access layer for the candidate data and creates a 
+     * response for the web font in a Json format
+     * 
+     * @param candidateService
+     * @param routingContext 
+     * 
+     * T 
+     */
+    
     private void getCandidates(CandidateService candidateService, RoutingContext routingContext) {
         candidateService.getCandidates(r -> {
             if (r.succeeded()) {

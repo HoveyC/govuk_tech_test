@@ -36,7 +36,7 @@ public class CandidateServiceImpl implements CandidateService {
                     while (i.hasNext()) {
                         candidates.add(new Candidate(i.next()));
                     }
-                    handler.handle(Future.succeededFuture(candidates));//done
+                    handler.handle(Future.succeededFuture(candidates));
                     postgreSQLClient.close();
                 } else {
                     handler.handle(Future.failedFuture(result.cause()));
