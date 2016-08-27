@@ -19,7 +19,7 @@ to import the schema and test data run:
 
 To test the project and create the fatjar, javadocs, javasource packages:
 
-    mvn -Prelease-profile clean install
+    mvn -release-profile clean install
     
 - Run :
 
